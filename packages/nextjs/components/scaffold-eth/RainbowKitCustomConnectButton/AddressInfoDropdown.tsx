@@ -29,7 +29,7 @@ export const AddressInfoDropdown = ({
 
   const { copyToClipboard: copyAddressToClipboard, isCopiedToClipboard: isAddressCopiedToClipboard } =
     useCopyToClipboard();
-  const [selectingNetwork, setSelectingNetwork] = useState(false);
+  const [setSelectingNetwork] = useState(false);
   const dropdownRef = useRef<HTMLDetailsElement>(null);
 
   const closeDropdown = () => {
