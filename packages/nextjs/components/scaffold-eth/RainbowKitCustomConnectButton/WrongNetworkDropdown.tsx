@@ -13,9 +13,7 @@ export const WrongNetworkDropdown = () => {
   const [selectingNetwork, setSelectingNetwork] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const closeDropdown = () => {
-    setSelectingNetwork(false);
-  };
+  
 
   useOutsideClick(dropdownRef, () => {
     setSelectingNetwork(false);
