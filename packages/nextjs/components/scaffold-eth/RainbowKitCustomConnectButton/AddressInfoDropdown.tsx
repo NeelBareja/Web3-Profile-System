@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 
 type AddressInfoDropdownProps = {
   address: Address;
-  blockExplorerAddressLink: string | undefined;
+  
   displayName: string;
   ensAvatar?: string;
 };
@@ -23,7 +23,6 @@ export const AddressInfoDropdown = ({
   address,
   ensAvatar,
   displayName,
-  blockExplorerAddressLink,
 }: AddressInfoDropdownProps) => {
   const { disconnect } = useDisconnect();
   const checkSumAddress = getAddress(address);
