@@ -32,10 +32,7 @@ export const AddressInfoDropdown = ({
   const [setSelectingNetwork] = useState(false);
   const dropdownRef = useRef<HTMLDetailsElement>(null);
 
-  const closeDropdown = () => {
-    setSelectingNetwork(false);
-    dropdownRef.current?.removeAttribute("open");
-  };
+  
 
   useOutsideClick(dropdownRef, closeDropdown);
 
