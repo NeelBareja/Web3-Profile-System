@@ -6,8 +6,8 @@ import { Address } from "~~/components/scaffold-eth";
 import { useState, useCallback } from "react";
 import { useScaffoldReadContract, useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 import { motion } from "framer-motion";
-import { Particles } from "react-tsparticles";
-import { loadFull } from "tsparticles";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
   const { writeContractAsync } = useScaffoldWriteContract({contractName: "YourContract" });
 
   const particlesInit = useCallback(async (engine: any) => {
-    await loadFull(engine);
+    await loadSlim(engine);
   }, []);
 
   return (
